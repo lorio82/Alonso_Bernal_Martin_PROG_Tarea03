@@ -93,4 +93,5 @@ public class Posicion {
     public String toString() {
             return "fila=" + fila + ", columna=" + columna;
     }//Cierrre del método
+    
 }//Cierrre de la clase
