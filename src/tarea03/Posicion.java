@@ -37,4 +37,51 @@ public class Posicion {
             this.columna = 'a';         
         }
     } //Cierre del constructor
+    
+    /**
+     * Método para obtener el valor del entero almacenado en fila
+     * @return fila Número entero que representa la posición vertical de la pieza en el tablero.
+    */
+    public int getFila() {
+        return fila;
+    }//Cierrre del método
+    
+    /**
+     * Método que establece el valor del entero almacenado en fila.
+     * Si el valor de fila no es correcto le asigna un valor predeterminado.
+     * @param fila Número entero que representa la posición vertical de la pieza en el tablero.
+    */
+    public void setFila(int fila) {
+
+        Pattern patFila = Pattern.compile("[1-8]");
+        Matcher matFila = patFila.matcher(String.valueOf(fila));
+        if (matFila.find()) {
+            Posicion.fila = fila;
+        } else {
+            this.fila = 1;
+        }
+    }//Cierrre del método
+
+    /**
+     * Método que devuelve el valor del caráter almacenado en columna.
+     * @return columna Carácter que representa la posición horizontal de la pieza en el tablero.
+    */
+    public char getColumna() {
+        return columna;
+    }//Cierrre del método
+
+    /**
+     * Método que establece el valor del caráter almacenado en columna.
+     * Si el valor de columna no es correcto le asigna un valor predeterminado.
+     * @param columna Carácter que representa la posición horizontal de la pieza en el tablero.
+    */
+    public void setColumna(char columna) {
+       Pattern pat = Pattern.compile("[a-h]");
+       Matcher mat = pat.matcher(String.valueOf(columna));
+        if (mat.find()) {
+            Posicion.columna = columna;
+        } else {
+            this.columna = 'a';
+        }
+    }//Cierrre del método
 }
