@@ -27,4 +27,13 @@ public class Rey {
         }
     }//Cierre del constructor
     
+    /**
+     * Método constructor por Defecto que asigna por defecto
+     * el color blanco y crea un objeto posicion
+     * con los parámmetros predeterminados para éste.
+    */
+    public Rey() {   
+        this.color = Color.BLANCO;
+        posicion = new Posicion(1, 'e');
+    }//Cierre del constructor por defecto
 }
