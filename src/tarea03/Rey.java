@@ -52,4 +52,17 @@ public class Rey {
     public Posicion getPosicion() {
         return posicion;
     }//Cierre del método
+    
+
+    /**
+     * Método que crea una cadena de caracteres con los valores de color y posicion. 
+     * @return String  Devuelve una cadena de caracteres con los valores de color y
+     * posicion.
+     */
+    @Override
+    public String toString() {  
+        
+            return "Rey " + color + "," + posicion + "%n";
+      
+    }//Cierre del método
 }
