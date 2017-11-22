@@ -84,4 +84,13 @@ public class Posicion {
             this.columna = 'a';
         }
     }//Cierrre del método
-}
+    
+        /**
+     * Método que crea una cadena de caracteres con los valores de fila y columna.
+     * @return String  Devuelve una cadena de caracteres con los valores de fila y columna.   
+     */
+    @Override
+    public String toString() {
+            return "fila=" + fila + ", columna=" + columna;
+    }//Cierrre del método
+}//Cierrre de la clase
