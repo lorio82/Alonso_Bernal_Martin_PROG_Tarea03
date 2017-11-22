@@ -36,4 +36,20 @@ public class Rey {
         this.color = Color.BLANCO;
         posicion = new Posicion(1, 'e');
     }//Cierre del constructor por defecto
+    
+    /**
+     * Método para obtener el valor del enumerado Color almacenado en el atributo color
+     * @return color Color enum 
+    */
+    public Color getColor() {
+        return color;
+    }//Cierre del método
+
+    /**
+     * Método para obtener el valor de la posicion almacenada en el atributo posicion.
+     * @return posicion String 
+    */
+    public Posicion getPosicion() {
+        return posicion;
+    }//Cierre del método
 }
