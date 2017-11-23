@@ -71,14 +71,16 @@ public class Principal {
                     break;
                 case 2:
 
-                    Direccion.values();    // Devuelve un array que contiene todos los enum Direccion
+                    /**
+                     * Devuelve un array que contiene todas las constantes tipo direccion con el mismo 
+                     * orden en el que fueron declarados.
+                     * @return array Direccion
+                     */
+                    Direccion.values();
 
                     /**
-                     * El siguiente for muestra un menu compuesto por cada una
-                     * de las direcciones asociadas a un número ( el número
-                     * viene dado por la posición que ocupan en el enum
-                     * Direccion + 1 puesto que la posición inicial es igual a 0
-                     * y las opciones del menú comienzan en el número 1
+                     *  Bucle for que devuelve los literales tipo direccion junto a un entero que indica su
+                     *  posición en el array más uno. 
                      */
                     for (Direccion d : Direccion.values()) {
                         String nombreDireccion = d.toString();

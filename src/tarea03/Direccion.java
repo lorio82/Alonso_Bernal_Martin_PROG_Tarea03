@@ -6,7 +6,7 @@
 package tarea03;
 
 /**
- * Esta clase crea un enumerado  que contiene las diferentes direcciones que puede elegir el usuario.
+ * Esta clase Direccioncrea un enumerado  que contiene las diferentes direcciones que puede elegir el usuario.
  * @author: Martín Alonso Bernal
  * @version: 11/2017
  */
