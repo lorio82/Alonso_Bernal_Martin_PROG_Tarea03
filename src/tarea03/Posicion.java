@@ -11,8 +11,8 @@ import java.util.regex.*;
 
 public class Posicion {
     
-    static int fila;
-    static char columna;
+    private int fila;
+    private char columna;
 
     /**
      * Método constructor Posicion que recibe los parámetros fila y columna. Comprueba que éstos sean correctos
@@ -56,7 +56,7 @@ public class Posicion {
         Pattern patFila = Pattern.compile("[1-8]");
         Matcher matFila = patFila.matcher(String.valueOf(fila));
         if (matFila.find()) {
-            Posicion.fila = fila;
+            this.fila = fila;
         } else {
             this.fila = 1;
         }
@@ -79,7 +79,7 @@ public class Posicion {
        Pattern pat = Pattern.compile("[a-h]");
        Matcher mat = pat.matcher(String.valueOf(columna));
         if (mat.find()) {
-            Posicion.columna = columna;
+            this.columna = columna;
         } else {
             this.columna = 'a';
         }

@@ -7,8 +7,11 @@ package tarea03;
  * @version: 11/2017
  */
 public class Rey {
-    private static Color color;
-    private static Posicion posicion;
+    private  Color color;
+    private  Posicion posicion;
+    
+    private int fila;
+    private char columna;
     
     final String ERROR = "Movimiento incorrecto se sale de los límites del tablero";
     String errorPosicion;
@@ -64,6 +67,7 @@ public class Rey {
      * @param direccion Direccion
     */
     public void mueve(Direccion direccion) {  
+        
 
         // El siguiente if determinará la modificación a realizar según el valor del parámetro color del método constructor.
         if (color == Color.NEGRO) {
@@ -74,71 +78,71 @@ public class Rey {
              */ 
             switch (direccion) {
                 case NORTE:
-                    if (Posicion.fila == 1) {
+                    if (fila == 1) {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(--Posicion.fila);
+                    posicion.setFila(--fila);
                     }
                     break;
                 case NORESTE:
-                    if (Posicion.fila == 1 || Posicion.columna == 'a') {
+                    if (fila == 1 || columna == 'a') {
                          errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(--Posicion.fila);
-                    posicion.setColumna(--Posicion.columna);
+                    posicion.setFila(--fila);
+                    posicion.setColumna(--columna);
                     }
                     break;
                 case ESTE:
-                    if (Posicion.columna == 'a') {
+                    if (columna == 'a') {
                          errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setColumna(--Posicion.columna);
+                    posicion.setColumna(--columna);
                     }
                     break;
                 case SURESTE:
-                    if (Posicion.fila == 8 || Posicion.columna == 'a') {
+                    if (fila == 8 || columna == 'a') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(++Posicion.fila);
-                    posicion.setColumna(--Posicion.columna);
+                    posicion.setFila(++fila);
+                    posicion.setColumna(--columna);
                     }
                     break;
                 case SUR:
-                    if (Posicion.fila == 8) {
+                    if (fila == 8) {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(++Posicion.fila);
+                    posicion.setFila(++fila);
                     }
                     break;
                 case SUROESTE:
-                    if (Posicion.fila == 8 || Posicion.columna == 'h') {
+                    if (fila == 8 || columna == 'h') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(++Posicion.fila);
-                    posicion.setColumna(++Posicion.columna);
+                    posicion.setFila(++fila);
+                    posicion.setColumna(++columna);
                     }
                     break;
                 case OESTE:
-                    if (Posicion.columna == 'h') {
+                    if (columna == 'h') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setColumna(++Posicion.columna);
+                    posicion.setColumna(++columna);
                     }
                     break;
                 case NOROESTE:
-                    if (Posicion.fila == 1 || Posicion.columna == 'h') {
+                    if (fila == 1 || columna == 'h') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(--Posicion.fila);
-                    posicion.setColumna(++Posicion.columna);
+                    posicion.setFila(--fila);
+                    posicion.setColumna(++columna);
                     }
                     break;
             }
@@ -148,71 +152,71 @@ public class Rey {
             switch (direccion) {
 
                 case NORTE:
-                    if (Posicion.fila == 8) {
+                    if (fila == 8) {
                         
                     }
                     else {
-                    posicion.setFila(++Posicion.fila);
+                    posicion.setFila(++fila);
                     }
                     break;
                 case NORESTE:
-                    if (Posicion.fila == 8 || Posicion.columna == 'h') {
+                    if (fila == 8 || columna == 'h') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(++Posicion.fila);
-                    posicion.setColumna(++Posicion.columna);
+                    posicion.setFila(++fila);
+                    posicion.setColumna(++columna);
                     }
                     break;
                 case ESTE:
-                    if (Posicion.columna == 'h') {
+                    if (columna == 'h') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setColumna(++Posicion.columna);
+                    posicion.setColumna(++columna);
                     }
                     break;
                 case SURESTE:
-                    if (Posicion.fila == 1 || Posicion.columna == 'h') {
+                    if (fila == 1 || columna == 'h') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(--Posicion.fila);
-                    posicion.setColumna(++Posicion.columna);
+                    posicion.setFila(--fila);
+                    posicion.setColumna(++columna);
                     }
                     break;
                 case SUR:
-                    if (Posicion.fila == 1) {
+                    if (fila == 1) {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(--Posicion.fila);
+                    posicion.setFila(--fila);
                     }
                     break;
                 case SUROESTE:
-                    if (Posicion.fila == 1 || Posicion.columna == 'a') {
+                    if (fila == 1 || columna == 'a') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(--Posicion.fila);
-                    posicion.setColumna(--Posicion.columna);
+                    posicion.setFila(--fila);
+                    posicion.setColumna(--columna);
                     }
                     break;
                 case OESTE:
-                    if (Posicion.columna == 'a') {
+                    if (columna == 'a') {
                         errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setColumna(--Posicion.columna);
+                    posicion.setColumna(--columna);
                     }
                     break;
                 case NOROESTE:
-                    if (Posicion.fila == 8 || Posicion.columna == 'a') {
+                    if (fila == 8 || columna == 'a') {
                          errorPosicion = ERROR;
                     }
                     else {
-                    posicion.setFila(++Posicion.fila);
-                    posicion.setColumna(--Posicion.columna);                   
+                    posicion.setFila(++fila);
+                    posicion.setColumna(--columna);                   
                     }
                     break;
             }
